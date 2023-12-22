@@ -12,6 +12,14 @@ struct BotBracketApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
+            TabView {
+                
+                
+                
+            }
+            
+            
         }
     }
 }
