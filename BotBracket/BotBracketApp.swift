@@ -14,8 +14,15 @@ struct BotBracketApp: App {
             ContentView()
             
             TabView {
-                
-                
+                MatchView().tabItem {
+                    Text("Match")
+                }
+                BracketView().tabItem {
+                    Text("Bracket")
+                }
+                VideoView().tabItem {
+                    Text("Video")
+                }
                 
             }
             
