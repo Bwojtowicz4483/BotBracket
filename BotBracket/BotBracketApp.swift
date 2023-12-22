@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct BotBracketApp: App {
+  //  @State var wordplay: WordPlay = WordPlay()
     var body: some Scene {
         WindowGroup {
             ContentView()
-            
+          //  ContentView(wordplay: $wordplay)
+
             TabView {
                 MatchView().tabItem {
                     Text("Match")
