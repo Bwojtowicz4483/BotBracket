@@ -9,7 +9,8 @@ import SwiftUI
 
 struct BracketView: View {
     var body: some View {
-        
-        
+        VStack{
+         Text("place Holder")
+        }
     }
 }

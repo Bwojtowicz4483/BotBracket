@@ -10,6 +10,8 @@ import SwiftUI
 
 struct VideoView: View {
     var body: some View {
-        
+        VStack{
+         Text("place Holder")
+        }
     }
 }
