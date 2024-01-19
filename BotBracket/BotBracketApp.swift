@@ -11,24 +11,28 @@ import SwiftUI
 struct BotBracketApp: App {
   //  @State var wordplay: WordPlay = WordPlay()
     var body: some Scene {
+        
         WindowGroup {
+            
             ContentView()
           //  ContentView(wordplay: $wordplay)
 
             TabView {
-                MatchView().tabItem {
-                    Text("Match")
+                Group{
+                    MatchView().tabItem {
+                        Label("Match",systemImage: "circle")
+                    }
+                    BracketView().tabItem {
+                        Label("Bracket",systemImage: "circle")
+                    }
+                    VideoView().tabItem {
+                        Label("Video",systemImage: "circle")
+                    }
                 }
-                BracketView().tabItem {
-                    Text("Bracket")
-                }
-                VideoView().tabItem {
-                    Text("Video")
-                }
-                
-            }
-            
-            
+                .toolbarBackground(.red, for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
+                .toolbarColorScheme(.dark, for: .tabBar)
+             }
         }
     }
 }
