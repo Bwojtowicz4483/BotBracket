@@ -26,7 +26,12 @@ struct BotBracketApp: App {
                         Label("Bracket",systemImage: "circle")
                     }
                     VideoView().tabItem {
-                        Label("Video",systemImage: "circle")
+                        Text("Video")
+                            .foregroundStyle(.white)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10.0)
+                                    .foregroundStyle(.red, .gray)
+                            )
                     }
                 }
                 .toolbarBackground(.red, for: .tabBar)
