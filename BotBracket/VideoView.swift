@@ -10,10 +10,7 @@ import AVKit
 
 struct VideoView: View {
     var body: some View {
-        VStack{
-         Text("place Holder")
-            VideoPlayer(player: AVPlayer(url:  URL(string: "https://www.youtube.com/watch?v=LXb3EKWsInQ")!))
-                .frame(height: 400)
+            YoutubeView(videoID: "wU0MIX0VBK4")
+                .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.75)
         }
-    }
 }

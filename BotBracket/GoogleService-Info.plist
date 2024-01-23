@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>370179516822-8qu6ff5kjet20mdp3fo6ue9t8f092e43.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.370179516822-8qu6ff5kjet20mdp3fo6ue9t8f092e43</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCUdsoNumbb4KZp_NvH-SQiUhSJSwrG4tk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>370179516822</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.d214.jhhs.BotBracket</string>
+	<key>PROJECT_ID</key>
+	<string>robotrumble-6f4a6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>robotrumble-6f4a6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:370179516822:ios:c65a86199f403b79f995b7</string>
+	<key>DATABASE_URL</key>
+	<string>https://robotrumble-6f4a6-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
