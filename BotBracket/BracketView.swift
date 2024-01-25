@@ -10,6 +10,7 @@ import SwiftUI
 
 struct BracketView: View {
     var array: [String] = ["placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder"]
+    
     var body: some View {
        
         VStack{

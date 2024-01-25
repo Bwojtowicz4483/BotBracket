@@ -6,16 +6,20 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
 struct BotBracketApp: App {
-  //  @State var wordplay: WordPlay = WordPlay()
+    init(){
+        FirebaseApp.configure()
+        print("Firebase Configured")
+    }
     var body: some Scene {
         
         WindowGroup {
             
             ContentView()
-          //  ContentView(wordplay: $wordplay)
+          
 
             TabView {
                 Group{
