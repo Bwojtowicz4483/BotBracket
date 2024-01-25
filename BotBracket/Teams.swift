@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Teams:Hashable{
-    var SchoolName:String
+    var schoolName:String
     var wins:Int
     var losses:Int
     var robotName:String

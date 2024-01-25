@@ -10,16 +10,15 @@ import SwiftUI
 
 struct BracketView: View {
     var array: [String] = ["placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder"]
+    var teams:[Teams]
     var body: some View {
        
         VStack{
            
          
            
-            List(array, id: \.self){ array in Text(array)
+            List(teams, id: \.self){ currentTeams in TeamView(currentTeam: currentTeams)
             
-                    
-                    
                 }
                 
                 

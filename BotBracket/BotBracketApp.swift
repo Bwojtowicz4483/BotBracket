@@ -18,11 +18,11 @@ struct BotBracketApp: App {
           //  ContentView(wordplay: $wordplay)
 
             TabView {
-                Group{
+              //  Group{
                     MatchView().tabItem {
                         Label("Match",systemImage: "circle")
                     }
-                    BracketView().tabItem {
+                BracketView().tabItem {
                         Label("Bracket",systemImage: "circle")
                     }
                     VideoView().tabItem {
@@ -37,7 +37,7 @@ struct BotBracketApp: App {
                 .toolbarBackground(.red, for: .tabBar)
                 .toolbarBackground(.visible, for: .tabBar)
                 .toolbarColorScheme(.dark, for: .tabBar)
-             }
+           // }
         }
     }
 }
