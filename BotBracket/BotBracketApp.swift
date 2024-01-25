@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import FirebaseDatabase
 
 @main
 struct BotBracketApp: App {
@@ -22,12 +23,12 @@ struct BotBracketApp: App {
           
 
             TabView {
-                Group{
+              //  Group{
                     MatchView().tabItem {
                         Label("Match",systemImage: "circle")
                     }
-                    BracketView().tabItem {
-                        Label("Bracket",systemImage: "circle")
+                BracketView().tabItem {
+                        Text("Bracket")
                     }
                     VideoView().tabItem {
                         Text("Video")
@@ -41,7 +42,7 @@ struct BotBracketApp: App {
                 .toolbarBackground(.red, for: .tabBar)
                 .toolbarBackground(.visible, for: .tabBar)
                 .toolbarColorScheme(.dark, for: .tabBar)
-             }
+           // }
         }
     }
 }

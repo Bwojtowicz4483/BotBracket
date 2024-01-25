@@ -9,29 +9,23 @@
 import SwiftUI
 
 struct BracketView: View {
-    var array: [String] = ["placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder","placeholder"]
+    @StateObject var teamViewModel = TeamViewModel()
     
     var body: some View {
-       
-        VStack{
-           
-         
-           
-            List(array, id: \.self){ array in Text(array)
-            
-                    
-                    
+        VStack {
+                List(teamViewModel.teams, id: \.id) { team in
+                    VStack(alignment: .leading) {
+                        Text("School: \(team.SchoolName)")
+                        Text("Robot Name: \(team.robotName)")
+                        Text("Wins: \(team.wins)")
+                        Text("Losses: \(team.losses)")
+                    }
                 }
-                
-                
-                
-            
-            
-           Text("Bracket of Teams")
-                
-                .foregroundStyle(.red)
-               
-               
+            } 
+        .onAppear {
+                teamViewModel.pullFromFirebase()
+            }
         }
+       
     }
-}
+
