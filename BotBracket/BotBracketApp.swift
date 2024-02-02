@@ -28,8 +28,8 @@ struct BotBracketApp: App {
                         Label("Match",systemImage: "flag.and.flag.filled.crossed")
                             .foregroundStyle(.white)
                     }
-                    BracketView().tabItem {
-                        Label("Bracket",systemImage: "person.3.fill")
+                    TeamsView().tabItem {
+                        Label("Teams",systemImage: "person.3.fill")
                             .foregroundStyle(.white)
                     }
                     VideoView().tabItem {

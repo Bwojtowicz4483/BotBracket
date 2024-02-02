@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct TeamView:View {
+struct ListView:View {
     let currentTeam:Teams
     var body: some View {
        Text("test")

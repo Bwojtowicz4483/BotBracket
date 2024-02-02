@@ -26,12 +26,16 @@ class TeamViewModel: ObservableObject{
                 guard let dictionary = robot.value as? [String: Any] else {
                     continue
                 }
-                guard let schoolName = dictionary["school"] as? String,
-                      let robotName = dictionary["robotName"] as? String,
-                      let record = dictionary["record"] as? [String: Int],
-                      let wins = record["win"],
-                      let losses = record["lose"] else { return }
-                    let team = Teams(SchoolName: schoolName, robotName: robotName, wins: wins, losses: losses)
+                guard let schoolName = dictionary["school"] as? String else { return }
+                guard let robotName = dictionary["robotName"] as? String else { return }
+                guard let record = dictionary["record"] as? [String: Int] else { return }
+                guard let wins = record["win"] else { return }
+                guard let losses = record["lose"] else { return }
+                guard let color = dictionary["color"] as? [String: Int] else { return }
+                guard let blue = color["blue"] else { return }
+                guard let green = color["green"] else { return }
+                guard let red = color["red"] else { return }
+                let team = Teams(SchoolName: schoolName, robotName: robotName, wins: wins, losses: losses, blue: blue, green: green, red: red)
                                     newList.append(team)
                 }
                 self.teams = newList

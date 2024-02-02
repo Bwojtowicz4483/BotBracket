@@ -20,12 +20,10 @@
 		2A9946422B6D8B260034787C /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9946412B6D8B260034787C /* TeamModel.swift */; };
 		2A9946442B6D8C310034787C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A9946432B6D8C310034787C /* GoogleService-Info.plist */; };
 		2AC39D1B2B6019D300649B4C /* YoutubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC39D1A2B6019D300649B4C /* YoutubeView.swift */; };
-		901BAC542B35DD88007C006C /* BracketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901BAC532B35DD88007C006C /* BracketView.swift */; };
+		901BAC542B35DD88007C006C /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901BAC532B35DD88007C006C /* TeamsView.swift */; };
 		901BAC562B35DDA1007C006C /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901BAC552B35DDA1007C006C /* VideoView.swift */; };
 		901BAC582B35DDB3007C006C /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901BAC572B35DDB3007C006C /* MatchView.swift */; };
-		C30C4E662B602067002F2769 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C4E652B602067002F2769 /* Teams.swift */; };
-		C30C4E682B60240A002F2769 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C4E672B60240A002F2769 /* TeamView.swift */; };
-		C3DD0F772B62CB690024B566 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3DD0F762B62CB690024B566 /* GoogleService-Info.plist */; };
+		C30C4E682B60240A002F2769 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C4E672B60240A002F2769 /* ListView.swift */; };
 		DBB395972B35E1F700A42DAD /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB395962B35E1F700A42DAD /* NavigationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,12 +59,10 @@
 		2A9946412B6D8B260034787C /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamModel.swift; path = ../TeamModel.swift; sourceTree = "<group>"; };
 		2A9946432B6D8C310034787C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AC39D1A2B6019D300649B4C /* YoutubeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeView.swift; sourceTree = "<group>"; };
-		901BAC532B35DD88007C006C /* BracketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BracketView.swift; sourceTree = "<group>"; };
+		901BAC532B35DD88007C006C /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
 		901BAC552B35DDA1007C006C /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		901BAC572B35DDB3007C006C /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
-		C30C4E652B602067002F2769 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
-		C30C4E672B60240A002F2769 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
-		C3DD0F762B62CB690024B566 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C30C4E672B60240A002F2769 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		DBB395962B35E1F700A42DAD /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,8 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				2A5C07582B35D9FA00A2FCFA /* BotBracketApp.swift */,
-				901BAC532B35DD88007C006C /* BracketView.swift */,
-				C30C4E672B60240A002F2769 /* TeamView.swift */,
+				901BAC532B35DD88007C006C /* TeamsView.swift */,
+				C30C4E672B60240A002F2769 /* ListView.swift */,
 				2A9946412B6D8B260034787C /* TeamModel.swift */,
 				901BAC552B35DDA1007C006C /* VideoView.swift */,
 				2A65E9682B62CA9C00AF24FA /* TeamViewModel.swift */,
@@ -305,11 +301,11 @@
 				2AC39D1B2B6019D300649B4C /* YoutubeView.swift in Sources */,
 				2A5C075B2B35D9FA00A2FCFA /* ContentView.swift in Sources */,
 				2A65E9692B62CA9C00AF24FA /* TeamViewModel.swift in Sources */,
-				901BAC542B35DD88007C006C /* BracketView.swift in Sources */,
+				901BAC542B35DD88007C006C /* TeamsView.swift in Sources */,
 				2A9946422B6D8B260034787C /* TeamModel.swift in Sources */,
 				DBB395972B35E1F700A42DAD /* NavigationView.swift in Sources */,
 				2A5C07592B35D9FA00A2FCFA /* BotBracketApp.swift in Sources */,
-				C30C4E682B60240A002F2769 /* TeamView.swift in Sources */,
+				C30C4E682B60240A002F2769 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
