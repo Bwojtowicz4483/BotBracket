@@ -14,11 +14,16 @@ struct BracketView: View {
     var body: some View {
         VStack {
                 List(teamViewModel.teams, id: \.id) { team in
-                    VStack(alignment: .leading) {
-                        Text("School: \(team.SchoolName)")
-                        Text("Robot Name: \(team.robotName)")
-                        Text("Wins: \(team.wins)")
-                        Text("Losses: \(team.losses)")
+                    HStack() {
+                        VStack(alignment: .leading) {
+                            Text("\(team.robotName)")
+                                .font(.title)
+                            Text("\(team.SchoolName)")
+                                .font(.title2)
+                        }
+                        Spacer()
+                        Text("(\(team.wins)-\(team.losses))")
+                            .font(.title)
                     }
                 }
             }

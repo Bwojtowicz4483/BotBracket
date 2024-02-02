@@ -11,14 +11,7 @@ import SwiftUI
 struct TeamView:View {
     let currentTeam:Teams
     var body: some View {
-        HStack{
-            VStack(alignment: .center){
-                Text(currentTeam.robotName)
-                    .font(.largeTitle)
-                Text(currentTeam.SchoolName)
-                    .font(.title3)
-            }
+       Text("test")
           
-        }
     }
 }
