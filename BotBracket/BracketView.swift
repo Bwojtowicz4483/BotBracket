@@ -21,7 +21,7 @@ struct BracketView: View {
                         Text("Losses: \(team.losses)")
                     }
                 }
-            } 
+            }
         .onAppear {
                 teamViewModel.pullFromFirebase()
             }
