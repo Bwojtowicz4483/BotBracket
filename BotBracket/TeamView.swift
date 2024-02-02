@@ -15,7 +15,7 @@ struct TeamView:View {
             VStack(alignment: .center){
                 Text(currentTeam.robotName)
                     .font(.largeTitle)
-                Text(currentTeam.schoolName)
+                Text(currentTeam.SchoolName)
                     .font(.title3)
             }
             Text("(\(currentTeam.wins)-\(currentTeam.losses))")
