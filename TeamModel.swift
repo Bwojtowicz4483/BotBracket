@@ -14,7 +14,5 @@ struct Teams: Hashable {
     var robotName:String
     var wins:Int
     var losses:Int
-    var blue:Int
-    var green:Int
-    var red:Int
+    var schoolColor:Color
 }
