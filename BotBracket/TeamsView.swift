@@ -13,6 +13,14 @@ struct TeamsView: View {
     
     var body: some View {
         VStack {
+         
+                Button("Filter"){}
+                .frame( alignment: .topLeading)
+                .padding()
+                                   .background(.red)
+                                   .mask(Circle())
+          
+                .foregroundColor(.white)
                 List(teamViewModel.teams, id: \.id) { team in
                     HStack() {
 //                            .frame(maxWidth: 10, maxHeight: .infinity)

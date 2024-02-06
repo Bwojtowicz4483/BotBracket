@@ -11,7 +11,9 @@ import SwiftUI
 struct ListView:View {
     let currentTeam:Teams
     var body: some View {
-       Text("test")
-          
+       
+            
+            Text("test")
+        
     }
 }
