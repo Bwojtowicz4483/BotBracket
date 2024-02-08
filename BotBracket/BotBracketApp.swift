@@ -23,7 +23,7 @@ struct BotBracketApp: App {
             
             
             TabView {
-              //  Group{
+                Group{
                     MatchView().tabItem {
                         Label("Match",systemImage: "flag.and.flag.filled.crossed")
                             .foregroundStyle(.white)
@@ -48,3 +48,4 @@ struct BotBracketApp: App {
             }
         }
     }
+}

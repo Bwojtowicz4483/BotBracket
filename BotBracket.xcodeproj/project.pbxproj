@@ -23,7 +23,6 @@
 		901BAC542B35DD88007C006C /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901BAC532B35DD88007C006C /* TeamsView.swift */; };
 		901BAC562B35DDA1007C006C /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901BAC552B35DDA1007C006C /* VideoView.swift */; };
 		901BAC582B35DDB3007C006C /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901BAC572B35DDB3007C006C /* MatchView.swift */; };
-		C30C4E682B60240A002F2769 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C4E672B60240A002F2769 /* ListView.swift */; };
 		DBB395972B35E1F700A42DAD /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB395962B35E1F700A42DAD /* NavigationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +61,6 @@
 		901BAC532B35DD88007C006C /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
 		901BAC552B35DDA1007C006C /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		901BAC572B35DDB3007C006C /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
-		C30C4E672B60240A002F2769 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		DBB395962B35E1F700A42DAD /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +116,6 @@
 			children = (
 				2A5C07582B35D9FA00A2FCFA /* BotBracketApp.swift */,
 				901BAC532B35DD88007C006C /* TeamsView.swift */,
-				C30C4E672B60240A002F2769 /* ListView.swift */,
 				2A9946412B6D8B260034787C /* TeamModel.swift */,
 				901BAC552B35DDA1007C006C /* VideoView.swift */,
 				2A65E9682B62CA9C00AF24FA /* TeamViewModel.swift */,
@@ -305,7 +302,6 @@
 				2A9946422B6D8B260034787C /* TeamModel.swift in Sources */,
 				DBB395972B35E1F700A42DAD /* NavigationView.swift in Sources */,
 				2A5C07592B35D9FA00A2FCFA /* BotBracketApp.swift in Sources */,
-				C30C4E682B60240A002F2769 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

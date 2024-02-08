@@ -11,6 +11,7 @@ import FirebaseDatabase
 import FirebaseDatabaseSwift
 import SwiftUI
 
+
 class TeamViewModel: ObservableObject{
     @Published var teams: [Teams] = []
     
@@ -37,18 +38,18 @@ class TeamViewModel: ObservableObject{
                 guard let green = color["green"] else { return }
                 guard let red = color["red"] else { return }
                 
-                let normalizedRed = Double(red) / 255.0
-                let normalizedGreen = Double(green) / 255.0
-                let normalizedBlue = Double(blue) / 255.0
+                let sizedRed = Double(red) / 255.0
+                let sizedGreen = Double(green) / 255.0
+                let sizedBlue = Double(blue) / 255.0
                 
-                let schoolColor = Color(red: normalizedRed, green: normalizedGreen, blue: normalizedBlue)
+                let schoolColor = Color(red: sizedRed, green: sizedGreen, blue: sizedBlue)
                 let team = Teams(SchoolName: schoolName, robotName: robotName, wins: wins, losses: losses, schoolColor: schoolColor)
-                                    newList.append(team)
-                }
-                self.teams = newList
+                newList.append(team)
             }
+            self.teams = newList
         }
-        
     }
+}
+    
     
 
