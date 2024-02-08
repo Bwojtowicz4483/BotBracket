@@ -12,6 +12,14 @@ struct TeamsView: View {
     @StateObject var teamViewModel = TeamViewModel()
     var body: some View {
         VStack {
+         
+                Button("Filter"){}
+                .frame( alignment: .topLeading)
+                .padding()
+                                   .background(.red)
+                                   .mask(Circle())
+          
+                .foregroundColor(.white)
                 List(teamViewModel.teams, id: \.id) { team in
                     HStack() {
                         Rectangle()
