@@ -9,11 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-     Text("BotBracket")
-        .multilineTextAlignment(.center)
-        .font(.title)
-        
-        
+        ZStack{
+            
+        }
     }
 }
 

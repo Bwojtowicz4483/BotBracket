@@ -10,6 +10,7 @@ import SwiftUI
 
 struct Teams: Hashable {
     var id = UUID()
+    let teamNumber: String
     var SchoolName:String
     var robotName:String
     var wins:Int

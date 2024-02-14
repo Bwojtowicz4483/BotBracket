@@ -13,6 +13,7 @@ struct TeamsView: View {
     @State private var sortingOption = SortingOption.none
     @State private var isPickerVisible = false
     enum SortingOption {
+           case team
            case school
            case alphabetical
            case mostWins
@@ -22,6 +23,8 @@ struct TeamsView: View {
     
     var sortedTeams: [Teams] {
            switch sortingOption {
+           case .team:
+               return teamViewModel.teams
            case .school:
                return teamViewModel.teams.sorted(by: { $0.SchoolName < $1.SchoolName })
            case .alphabetical:
@@ -37,31 +40,17 @@ struct TeamsView: View {
     
     var body: some View {
         VStack {
-            HStack{
-                Spacer()
-                Button(action: {
-                    isPickerVisible.toggle()
-                }) {
-                    Text("Sort")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                    
-                }
-                .padding()
-                
-            }
-            if isPickerVisible {
+            HeaderView()
                             Picker("Sort By", selection: $sortingOption) {
+                                Text("Team #").tag(SortingOption.team)
                                 Text("School").tag(SortingOption.school)
-                                Text("Alphabetical").tag(SortingOption.alphabetical)
-                                Text("Most Wins").tag(SortingOption.mostWins)
-                                Text("Most Losses").tag(SortingOption.mostLosses)
+                                Text("Name").tag(SortingOption.alphabetical)
+                                Text("Wins").tag(SortingOption.mostWins)
+                                Text("Losses").tag(SortingOption.mostLosses)
                             }
                             .pickerStyle(SegmentedPickerStyle())
                             .padding()
-                        }
+                        
                 List(sortedTeams, id: \.id) { team in
                     HStack() {
                         Rectangle()
@@ -72,7 +61,7 @@ struct TeamsView: View {
                             Text("\(team.robotName)")
                                 .font(.title)
                                 .frame(alignment: .center)
-                            Text("\(team.SchoolName)")
+                            Text("#\(team.teamNumber) - \(team.SchoolName)")
                                 .font(.title3)
                                 .frame(alignment: .center)
                         }

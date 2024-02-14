@@ -18,10 +18,7 @@ struct BotBracketApp: App {
     var body: some Scene {
         
         WindowGroup {
-            
             ContentView()
-            
-            
             TabView {
                 Group{
                     MatchView().tabItem {
@@ -35,10 +32,6 @@ struct BotBracketApp: App {
                     VideoView().tabItem {
                         Label("Video",systemImage: "play.tv")
                             .foregroundStyle(.white)
-                        //    .background(
-                        //       RoundedRectangle(cornerRadius: 10.0)
-                        //              .foregroundStyle(.red, .gray)
-                        //                            )
                     }
                 }
                 .toolbarBackground(.red, for: .tabBar)

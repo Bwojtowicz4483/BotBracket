@@ -25,6 +25,7 @@ class TeamViewModel: ObservableObject{
             var newList = [Teams]()
             
             for robot in myDataSnapshot?.children.allObjects as! [DataSnapshot] {
+                let teamNumber = robot.key
                 guard let dictionary = robot.value as? [String: Any] else { return }
                 guard let schoolName = dictionary["school"] as? String else { return }
                 guard let robotName = dictionary["robotName"] as? String else { return }
@@ -43,7 +44,7 @@ class TeamViewModel: ObservableObject{
                 let sizedBlue = Double(blue) / 255.0
                 
                 let schoolColor = Color(red: sizedRed, green: sizedGreen, blue: sizedBlue)
-                let team = Teams(SchoolName: schoolName, robotName: robotName, wins: wins, losses: losses, schoolColor: schoolColor)
+                let team = Teams(teamNumber: teamNumber, SchoolName: schoolName, robotName: robotName, wins: wins, losses: losses, schoolColor: schoolColor)
                 newList.append(team)
             }
             self.teams = newList
