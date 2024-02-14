@@ -34,7 +34,7 @@ struct BotBracketApp: App {
                             .foregroundStyle(.white)
                     }
                 }
-                .toolbarBackground(.red, for: .tabBar)
+                .toolbarBackground(.black, for: .tabBar)
                 .toolbarBackground(.visible, for: .tabBar)
                 .toolbarColorScheme(.dark, for: .tabBar)
                 
