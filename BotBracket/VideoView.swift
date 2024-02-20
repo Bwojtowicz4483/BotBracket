@@ -10,18 +10,22 @@ import AVKit
 import FirebaseDatabaseInternal
 
 struct VideoView: View {
+    
     @State var myUrl: String = ""
 
     var body: some View {
-        VStack{
-            YoutubeView(videoID: myUrl)
-                .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.75)
-        }
-        .onAppear(){
-            pullURL()
-        }
-    }
+            ZStack{
+                Color.black
+                    .ignoresSafeArea(.all)
+                YoutubeView(videoID: myUrl)
+                    .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.75)
+            }
+            .onAppear(){
+                pullURL()
+            }
 
+        
+    }
 
         
     func pullURL(){
