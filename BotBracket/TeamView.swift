@@ -17,7 +17,7 @@ struct TeamView: View {
                     HStack {
                         Image(currentTeam.teamNumber)
                             .resizable()
-                            .frame(width: 100, height: 100)
+                            .frame(width: 60, height: 60)
                             .aspectRatio(contentMode: .fit)
                         VStack {
                             Text("Team #\(currentTeam.teamNumber)")

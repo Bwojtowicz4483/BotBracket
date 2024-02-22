@@ -33,6 +33,10 @@ struct BotBracketApp: App {
                         Label("Video",systemImage: "play.tv")
                             .foregroundStyle(.white)
                     }
+                    AboutView().tabItem {
+                        Label("About",systemImage: "info.circle")
+                            .foregroundStyle(.white)
+                    }
                 }
                 .toolbarBackground(.black, for: .tabBar)
                 .toolbarBackground(.visible, for: .tabBar)
