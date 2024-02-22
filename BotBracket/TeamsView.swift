@@ -12,6 +12,7 @@ struct TeamsView: View {
     @StateObject var teamViewModel = TeamViewModel()
     @State private var sortingOption = SortingOption.none
     @State private var isPickerVisible = false
+    @State var x = 0
     enum SortingOption {
            case team
            case school
@@ -37,8 +38,9 @@ struct TeamsView: View {
                return teamViewModel.teams.sorted(by: { $0.losses > $1.losses })
            }
        }
-    
+
     var body: some View {
+
         VStack {
             HeaderView()
                             Picker("Sort By", selection: $sortingOption) {
@@ -71,9 +73,14 @@ struct TeamsView: View {
                             .frame(alignment: .trailing)
                     }
                 }
+
             }
         .onAppear {
                 teamViewModel.pullFromFirebase()
+            if x == 0{
+                sortingOption = .team
+                x += 1
+            }
             }
         }
         }
