@@ -23,42 +23,35 @@ struct BotBracketApp: App {
                 Group{
                     MatchView().tabItem {
                         VStack{
-                            Label("Match",systemImage: "flag.and.flag.filled.crossed")
+                            Text("Match")
                                 .foregroundStyle(.white)
-                                .labelStyle(.iconOnly)
-                            Label("Match",systemImage: "flag.and.flag.filled.crossed")
+                            Image(systemName: "flag.and.flag.filled.crossed")
                                 .foregroundStyle(.white)
-                                .labelStyle(.titleOnly)
                         }
                     }
                     TeamsView().tabItem {
                         VStack{
-                            Label("Teams",systemImage: "person.3.fill")
+                            Text("Teams")
                                 .foregroundStyle(.white)
-                                .labelStyle(.iconOnly)
-                            Label("Teams",systemImage: "person.3.fill")
+                            Image(systemName: "person.3.fill")
                                 .foregroundStyle(.white)
-                                .labelStyle(.titleOnly)
+                               
                         }
                     }
                     VideoView().tabItem {
                         VStack{
-                            Label("LiveStream",systemImage: "play.tv")
+                            Text("LiveStream")
                                 .foregroundStyle(.white)
-                                .labelStyle(.iconOnly)
-                            Label("LiveStream",systemImage: "play.tv")
+                            Image(systemName: "play.tv")
                                 .foregroundStyle(.white)
-                                .labelStyle(.titleOnly)
                         }
                     }
                     AboutView().tabItem {
                         VStack{
-                            Label("About",systemImage: "info.circle")
+                            Text("About")
                                 .foregroundStyle(.white)
-                                .labelStyle(.iconOnly)
-                            Label("About",systemImage: "info.circle")
+                            Image(systemName: "info.circle")
                                 .foregroundStyle(.white)
-                                .labelStyle(.titleOnly)
                         }
                     }
                     
