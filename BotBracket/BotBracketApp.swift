@@ -22,21 +22,46 @@ struct BotBracketApp: App {
             TabView {
                 Group{
                     MatchView().tabItem {
-                        Label("Match",systemImage: "flag.and.flag.filled.crossed")
-                            .foregroundStyle(.white)
+                        VStack{
+                            Label("Match",systemImage: "flag.and.flag.filled.crossed")
+                                .foregroundStyle(.white)
+                                .labelStyle(.iconOnly)
+                            Label("Match",systemImage: "flag.and.flag.filled.crossed")
+                                .foregroundStyle(.white)
+                                .labelStyle(.titleOnly)
+                        }
                     }
                     TeamsView().tabItem {
-                        Label("Teams",systemImage: "person.3.fill")
-                            .foregroundStyle(.white)
+                        VStack{
+                            Label("Teams",systemImage: "person.3.fill")
+                                .foregroundStyle(.white)
+                                .labelStyle(.iconOnly)
+                            Label("Teams",systemImage: "person.3.fill")
+                                .foregroundStyle(.white)
+                                .labelStyle(.titleOnly)
+                        }
                     }
                     VideoView().tabItem {
-                        Label("Video",systemImage: "play.tv")
-                            .foregroundStyle(.white)
+                        VStack{
+                            Label("LiveStream",systemImage: "play.tv")
+                                .foregroundStyle(.white)
+                                .labelStyle(.iconOnly)
+                            Label("LiveStream",systemImage: "play.tv")
+                                .foregroundStyle(.white)
+                                .labelStyle(.titleOnly)
+                        }
                     }
                     AboutView().tabItem {
-                        Label("About",systemImage: "info.circle")
-                            .foregroundStyle(.white)
+                        VStack{
+                            Label("About",systemImage: "info.circle")
+                                .foregroundStyle(.white)
+                                .labelStyle(.iconOnly)
+                            Label("About",systemImage: "info.circle")
+                                .foregroundStyle(.white)
+                                .labelStyle(.titleOnly)
+                        }
                     }
+                    
                 }
                 .toolbarBackground(.black, for: .tabBar)
                 .toolbarBackground(.visible, for: .tabBar)

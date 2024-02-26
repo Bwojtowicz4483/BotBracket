@@ -13,6 +13,7 @@ struct AboutView: View {
     var body: some View {
         VStack{
             HeaderView()
+            
         }
     }
 }

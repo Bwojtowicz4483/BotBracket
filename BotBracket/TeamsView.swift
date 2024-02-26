@@ -71,7 +71,13 @@ struct TeamsView: View {
                         Text("(\(team.wins)-\(team.losses))")
                             .font(.title2)
                             .frame(alignment: .trailing)
+                        Text(">")
+                            .foregroundColor(.gray)
                     }
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                    print("working")
+                                        }
                 }
 
             }
