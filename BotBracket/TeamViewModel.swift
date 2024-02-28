@@ -29,7 +29,8 @@ class TeamViewModel: ObservableObject{
                 guard let dictionary = robot.value as? [String: Any] else { return }
                 guard let schoolName = dictionary["school"] as? String else { return }
                 guard let robotName = dictionary["robotName"] as? String else { return }
-                
+                guard let students = dictionary["students"] as? [String] else { return }
+
                 guard let record = dictionary["record"] as? [String: Int] else { return }
                 guard let wins = record["win"] else { return }
                 guard let losses = record["lose"] else { return }
@@ -44,7 +45,7 @@ class TeamViewModel: ObservableObject{
                 let sizedBlue = Double(blue) / 255.0
                 
                 let schoolColor = Color(red: sizedRed, green: sizedGreen, blue: sizedBlue)
-                let team = Teams(teamNumber: teamNumber, SchoolName: schoolName, robotName: robotName, wins: wins, losses: losses, schoolColor: schoolColor)
+                let team = Teams(teamNumber: teamNumber, SchoolName: schoolName, robotName: robotName, wins: wins, losses: losses, schoolColor: schoolColor, students: students)
                 newList.append(team)
             }
             self.teams = newList

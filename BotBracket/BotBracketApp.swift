@@ -23,35 +23,35 @@ struct BotBracketApp: App {
                 Group{
                     MatchView().tabItem {
                         VStack{
-                            Text("Match")
-                                .foregroundStyle(.white)
                             Image(systemName: "flag.and.flag.filled.crossed")
+                                .foregroundStyle(.white)
+                            Text("Match")
                                 .foregroundStyle(.white)
                         }
                     }
                     TeamsView().tabItem {
                         VStack{
-                            Text("Teams")
-                                .foregroundStyle(.white)
                             Image(systemName: "person.3.fill")
                                 .foregroundStyle(.white)
-                               
+                            Text("Teams")
+                                .foregroundStyle(.white)
                         }
                     }
                     VideoView().tabItem {
                         VStack{
-                            Text("LiveStream")
-                                .foregroundStyle(.white)
                             Image(systemName: "play.tv")
+                                .foregroundStyle(.white)
+                            Text("LiveStream")
                                 .foregroundStyle(.white)
                         }
                     }
                     AboutView().tabItem {
                         VStack{
-                            Text("About")
-                                .foregroundStyle(.white)
                             Image(systemName: "info.circle")
                                 .foregroundStyle(.white)
+                            Text("About")
+                                .foregroundStyle(.white)
+
                         }
                     }
                     
