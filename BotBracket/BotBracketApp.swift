@@ -23,9 +23,10 @@ struct BotBracketApp: App {
                 Group{
                     MatchView().tabItem {
                         VStack{
-                            Text("Match")
-                                .foregroundStyle(.white)
+                           
                             Image(systemName: "flag.and.flag.filled.crossed")
+                                .foregroundStyle(.white)
+                            Text("Match")
                                 .foregroundStyle(.white)
                         }
                     }
