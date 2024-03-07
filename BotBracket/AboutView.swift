@@ -11,10 +11,10 @@ import WebKit
 
 struct AboutView: View {
     
+
     var body: some View {
         VStack{
             HeaderView()
-
             Divider()
             Text("Meet the Developer")
                 
@@ -46,11 +46,15 @@ struct AboutView: View {
              
                 .font(.largeTitle)
             Divider()
+        ZStack{
             VStack{
+                YoutubeView(videoID: "https://www.youtube.com/embed/bsM1qdGAVbU?si=ADJo2l3mf8e7wh-H&?playsinline=0")
+                    .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.50)
                 
-                
+                YoutubeView(videoID: "https://www.youtube.com/embed/bsM1qdGAVbU?si=ADJo2l3mf8e7wh-H&?playsinline=0")
+                    .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.50)
             }
-            
+        }
             
         }
     }
