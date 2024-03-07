@@ -16,4 +16,5 @@ struct Teams: Hashable {
     var wins:Int
     var losses:Int
     var schoolColor:Color
+    var students: [String]
 }
