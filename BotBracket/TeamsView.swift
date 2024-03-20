@@ -76,6 +76,7 @@ struct TeamsView: View {
                             }
                         }
                     }
+                .frame(maxWidth: .infinity)
                 }
             }
             

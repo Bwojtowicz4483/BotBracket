@@ -8,14 +8,18 @@
 import Foundation
 import SwiftUI
 import WebKit
+import AVKit
+import FirebaseDatabaseInternal
 
 struct AboutView: View {
-    
+    var linkList = ["https://www.youtube.com/embed/UdYj5LmeQIQ","https://www.youtube.com/embed/1kgkxAU2Yjw","https://www.youtube.com/embed/cXAnrKwsDYA"]
+    @State var linkList2: [String] = []
+    var keyVal = "link"
     var body: some View {
         
-            VStack{
-                HeaderView()
-                ScrollView(.vertical, showsIndicators: false){
+        VStack{
+            HeaderView()
+            ScrollView(.vertical, showsIndicators: false){
                 Divider()
                 Text("Meet the Developer")
                 
@@ -48,12 +52,35 @@ struct AboutView: View {
                     .font(.largeTitle)
                 Divider()
                 VStack{
+//                    ForEach(linkList, id: \.self) { videoID in
+//                        YoutubeView(videoID: videoID)
+//                            .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height * 0.40)
+//                    }
+                    YoutubeView(videoID: "https://www.youtube.com/embed/bsM1qdGAVbU?si=ADJo2l3mf8e7wh-H&?playsinline=0")
+                                       .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.50)
+
+                                   YoutubeView(videoID: "https://www.youtube.com/embed/bsM1qdGAVbU?si=ADJo2l3mf8e7wh-H&?playsinline=0")
+                                       .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.50)
                     
                     
                 }
             }
-            
-            
+        }
+        .onAppear(){
+            pullURLS(keyVal: keyVal)
+        }
+    }
+    func pullURLS(keyVal: String){
+        let databaseRef = Database.database().reference().child("Links").child("infoVideos")
+        databaseRef.getData { myError, myDataSnapshot in
+            var newList: [String] = []
+            for links in myDataSnapshot?.children.allObjects as! [DataSnapshot] {
+                guard let myLink = links.value as? [String: String] else { return }
+                guard let link = myLink[keyVal] else { return }
+                print(link)
+                newList.append(link)
+            }
+                self.linkList2 = newList
         }
         
     }
