@@ -7,39 +7,28 @@
 
 import SwiftUI
 import WebKit
-import FirebaseCore
-import FirebaseDatabase
-import FirebaseDatabaseSwift
-import SwiftUI
 
-struct YoutubeView: UIViewRepresentable {
-
+struct YoutubeView: View {
     let videoID: String
     
-    func makeUIView(context: Context) -> WKWebView {
-        let configuration = WKWebViewConfiguration()
-              configuration.allowsInlineMediaPlayback = true
-              
-              let webView = WKWebView(frame: .zero, configuration: configuration)
-              webView.navigationDelegate = context.coordinator
-              return webView
-    }
-
-    func updateUIView(_ uiView: WKWebView, context: Context) {
-        guard let youtubeURL = URL(string: "\(videoID)") else { return }
-        
-                let request = URLRequest(url: youtubeURL)
-                uiView.load(request)
-            }
-    func makeCoordinator() -> Coordinator {
-        Coordinator()
-    }
-
-    class Coordinator: NSObject, WKNavigationDelegate {
-        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-
-            webView.evaluateJavaScript("document.querySelector('video').play();", completionHandler: nil)
-        }
+    var body: some View {
+        WebView(urlString: "\(videoID)")
+            .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height * 0.40)
     }
 }
 
+struct WebView: UIViewRepresentable {
+    let urlString: String
+    
+    func makeUIView(context: Context) -> WKWebView {
+        let webView = WKWebView()
+        return webView
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        if let url = URL(string: urlString) {
+            let request = URLRequest(url: url)
+            uiView.load(request)
+        }
+    }
+}
