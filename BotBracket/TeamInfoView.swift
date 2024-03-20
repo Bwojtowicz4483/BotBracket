@@ -17,6 +17,10 @@ struct TeamInfoView: View {
         self.team = team
     }
     var body: some View {
+        Image(systemName: "camera.metering.unknown")
+            .resizable()
+            .frame(minWidth: 100, idealWidth: 240, maxWidth: 280, minHeight: 50, idealHeight: 80, maxHeight: 90)
+        
         VStack {
 //            Text("Team Members")
 //                .font(.title)
@@ -26,6 +30,7 @@ struct TeamInfoView: View {
                     Text(student)
                         .font(.title3)
                 }
+                
             }
         }
         
