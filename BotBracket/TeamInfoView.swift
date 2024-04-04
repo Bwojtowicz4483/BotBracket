@@ -7,9 +7,9 @@
 
 import Foundation
 import SwiftUI
-
+import FirebaseDatabaseInternal
 struct TeamInfoView: View {
-    
+    @State var myImage: String = ""
     
     let team: Teams
     
@@ -33,6 +33,25 @@ struct TeamInfoView: View {
                 
             }
         }
+        .onAppear(){
+            pullRImage()
+        }
+
         
+    }
+    func pullRImage(){
+        let databaseRef = Database.database().reference().child("RobotInfo")
+        databaseRef.getData { myError, myDataSnapshot in
+            var newimage = ""
+            guard let myImage = myDataSnapshot?.value as? [String: String] else { return }
+            guard let image = myImage["robotImage"] else { return }
+            print(image)
+                newimage = image
+            print(newimage)
+            DispatchQueue.main.async {
+                self.myImage = newimage
+
+            }
+        }
     }
 }
