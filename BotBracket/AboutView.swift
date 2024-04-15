@@ -18,7 +18,11 @@ struct AboutView: View {
     var body: some View {
         
         VStack{
+            
             HeaderView()
+            Image("AppIconpic")
+                .resizable()
+                .frame(minWidth: 50, idealWidth: 100, maxWidth: 150, minHeight: 50, idealHeight: 100, maxHeight: 150)
             ScrollView(.vertical, showsIndicators: false){
                 Divider()
                 Text("Meet the Developer")
