@@ -43,49 +43,49 @@ struct TeamsView: View {
         
         VStack {
             HeaderView()
-//            Picker("Sort By", selection: $sortingOption) {
-//                Text("Team #").tag(SortingOption.team)
-//                Text("School").tag(SortingOption.school)
-//                Text("Name").tag(SortingOption.alphabetical)
-//                Text("Wins").tag(SortingOption.mostWins)
-//                Text("Losses").tag(SortingOption.mostLosses)
-//            }
-//            .pickerStyle(SegmentedPickerStyle())
-//            .padding()
-//            NavigationView{
-//                List(sortedTeams, id: \.id) { team in
-//                    NavigationLink(destination: TeamInfoView(team: team)){
-//                       
-//                            HStack() {
-//                                Rectangle()
-//                                    .foregroundColor(team.schoolColor)
-//                                    .frame(maxWidth: 10, maxHeight: .infinity, alignment: .leading)
-//                                Spacer()
-//                                VStack() {
-//                                    Text("\(team.robotName)")
-//                                        .font(.title)
-//                                        .frame(alignment: .center)
-//                                    Text("#\(team.teamNumber) - \(team.SchoolName)")
-//                                        .font(.title3)
-//                                        .frame(alignment: .center)
-//                                }
-//                                Spacer()
-//                                Text("(\(team.wins)-\(team.losses))")
-//                                    .font(.title2)
-//                                    .frame(alignment: .trailing)
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//            
-//        .onAppear {
-//            teamViewModel.pullFromFirebase()
-//            if x == 0{
-//                sortingOption = .team
-//                x += 1
+             Picker("Sort By", selection: $sortingOption) {
+                Text("Team #").tag(SortingOption.team)
+                Text("School").tag(SortingOption.school)
+                Text("Name").tag(SortingOption.alphabetical)
+                Text("Wins").tag(SortingOption.mostWins)
+                Text("Losses").tag(SortingOption.mostLosses)
             }
-//        }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            NavigationView{
+                List(sortedTeams, id: \.id) { team in
+                    NavigationLink(destination: TeamInfoView(team: team)){
+                       
+                            HStack() {
+                                Rectangle()
+                                    .foregroundColor(team.schoolColor)
+                                    .frame(maxWidth: 10, maxHeight: .infinity, alignment: .leading)
+                                Spacer()
+                                VStack() {
+                                    Text("\(team.robotName)")
+                                        .font(.title)
+                                        .frame(alignment: .center)
+                                    Text("#\(team.teamNumber) - \(team.SchoolName)")
+                                        .font(.title3)
+                                        .frame(alignment: .center)
+                                }
+                                Spacer()
+                                Text("(\(team.wins)-\(team.losses))")
+                                    .font(.title2)
+                                    .frame(alignment: .trailing)
+                            }
+                        }
+                    }
+                }
+            }
+            
+        .onAppear {
+            teamViewModel.pullFromFirebase()
+            if x == 0{
+                sortingOption = .team
+                x += 1
+            }
+        }
     }
 }
 

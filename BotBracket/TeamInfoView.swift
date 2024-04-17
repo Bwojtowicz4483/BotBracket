@@ -25,15 +25,16 @@ struct TeamInfoView: View {
                 Image(team.teamNumber)
                     .resizable()
                     .frame(maxWidth: 100, maxHeight: 100, alignment: .leading)
-//                Spacer()
+                  Spacer()
                 AsyncImage(url: URL(string: "https://firebasestorage.googleapis.com/v0/b/robotrumble-6f4a6.appspot.com/o/Unknown-1.jpeg?alt=media&token=1fe1053a-10a6-42c7-8b52-f955abbcf968")) { image in
-                    image.resizable()
+                    image
+                        .resizable()
                 } placeholder: {
                     ProgressView()
                 }
-                .frame(maxWidth: 175, maxHeight: 100, alignment: .center)
+                .frame(maxWidth: 250, maxHeight: 175, alignment: .leading)
             }
-//                Divider()
+                Divider()
             List {
                 ForEach(team.students, id: \.self) { student in
                     Text(student)
@@ -45,7 +46,7 @@ struct TeamInfoView: View {
         .onAppear(){
             pullRImage()
         }
-
+//        .frame(width: 200,height: 200)
         
     }
     func pullRImage(){
