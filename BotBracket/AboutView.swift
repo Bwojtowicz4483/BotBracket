@@ -18,41 +18,53 @@ struct AboutView: View {
     var body: some View {
         
         VStack{
+            HStack{
+            Image("DistrictLogo")
+                .resizable()
+                .frame(minWidth: 100, idealWidth: 240, maxWidth: 280, minHeight: 50, idealHeight: 80, maxHeight: 90)
+            // .frame(minWidth: 100, idealWidth: 250, maxWidth: 400)
             
-            HeaderView()
+                .scaledToFit()
             Image("AppIconpic")
                 .resizable()
-                .frame(minWidth: 50, idealWidth: 100, maxWidth: 150, minHeight: 50, idealHeight: 100, maxHeight: 150)
+                .frame(minWidth: 50, idealWidth: 100, maxWidth: 200, minHeight: 50, idealHeight: 100, maxHeight: 200)
+                .scaledToFit()
+            
+        }
             ScrollView(.vertical, showsIndicators: false){
                 Divider()
                 Text("Meet the Developer")
                 
                     .font(.largeTitle)
+                    .bold()
                 Divider()
                 
                 Text("Version 1.0")
                     .frame(width: 250)
-                
+                    .bold()
                 Divider()
                 VStack{
                     Text("Andrew Nowak")
                     Text("Adam Cubas")
                     Text("Ashley Saju")
                 }
+               
                 Divider()
                 
                 Text("Version 2.0")
                     .frame(width: 250)
-                
+                    .bold()
                 Divider()
                 VStack{
                     Text("Ben Wojtowicz")
                     Text("Cody Brown")
                     Text("Vincent Chen")
                 }
+                
+                .frame(width: 200)
                 Divider()
                 Text("Learn What We Do")
-                
+                    .bold()
                     .font(.largeTitle)
                 Divider()
                 VStack{
