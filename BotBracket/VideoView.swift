@@ -7,8 +7,8 @@
 
 import SwiftUI
 import AVKit
+import FirebaseDatabaseSwift
 import FirebaseDatabaseInternal
-
 struct VideoView: View {
     
     @State var myUrl: String = ""
