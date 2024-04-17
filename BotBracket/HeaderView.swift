@@ -10,6 +10,7 @@ import SwiftUI
 struct HeaderView: View {
     var body: some View {
         HStack {
+          
             Image("DistrictLogo")
                 .resizable()
                 .frame(minWidth: 100, idealWidth: 240, maxWidth: 280, minHeight: 50, idealHeight: 80, maxHeight: 90)

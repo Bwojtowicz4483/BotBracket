@@ -12,13 +12,17 @@ import AVKit
 import FirebaseDatabaseInternal
 
 struct AboutView: View {
-    var linkList = ["https://www.youtube.com/embed/UdYj5LmeQIQ","https://www.youtube.com/embed/1kgkxAU2Yjw","https://www.youtube.com/embed/cXAnrKwsDYA"]
+    var linkList = ["https://www.youtube.com/embed/UdYj5LmeQIQ?si=29ixUIErAawj0Mmb&?playsinline=0","https://www.youtube.com/embed/1kgkxAU2Yjw?si=NkRP_WY7FUobBYzV&?playsinline=0","https://www.youtube.com/embed/cXAnrKwsDYA?si=3j3hZOM_IGmI03_o&?playsinline=0"]
     @State var linkList2: [String] = []
     var keyVal = "link"
     var body: some View {
         
         VStack{
+            
             HeaderView()
+            Image("AppIconpic")
+                .resizable()
+                .frame(minWidth: 50, idealWidth: 100, maxWidth: 150, minHeight: 50, idealHeight: 100, maxHeight: 150)
             ScrollView(.vertical, showsIndicators: false){
                 Divider()
                 Text("Meet the Developer")
@@ -52,15 +56,10 @@ struct AboutView: View {
                     .font(.largeTitle)
                 Divider()
                 VStack{
-//                    ForEach(linkList, id: \.self) { videoID in
-//                        YoutubeView(videoID: videoID)
-//                            .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height * 0.40)
-//                    }
-                    YoutubeView(videoID: "https://www.youtube.com/embed/bsM1qdGAVbU?si=ADJo2l3mf8e7wh-H&?playsinline=0")
-                                       .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.50)
-
-                                   YoutubeView(videoID: "https://www.youtube.com/embed/bsM1qdGAVbU?si=ADJo2l3mf8e7wh-H&?playsinline=0")
-                                       .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.50)
+                    ForEach(linkList, id: \.self) { videoID in
+                        YoutubeView(videoID: videoID)
+                            .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height * 0.40)
+                    }
                     
                     
                 }

@@ -86,7 +86,7 @@ struct TeamsView: View {
                 sortingOption = .team
                 x += 1
             }
-        }
+       }
     }
 }
 
