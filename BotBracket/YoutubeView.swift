@@ -13,7 +13,6 @@ struct YoutubeView: View {
     
     var body: some View {
         WebView(urlString: "\(videoID)")
-            .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height * 0.40)
     }
 }
 
