@@ -9,28 +9,15 @@ import Foundation
 import SwiftUI
 import WebKit
 import AVKit
+import FirebaseDatabaseSwift
 import FirebaseDatabaseInternal
 
 struct AboutView: View {
-    var linkList = ["https://www.youtube.com/embed/UdYj5LmeQIQ?si=29ixUIErAawj0Mmb&?playsinline=0","https://www.youtube.com/embed/1kgkxAU2Yjw?si=NkRP_WY7FUobBYzV&?playsinline=0","https://www.youtube.com/embed/cXAnrKwsDYA?si=3j3hZOM_IGmI03_o&?playsinline=0"]
-    @State var linkList2: [String] = []
-    var keyVal = "link"
+    @State var linkList: [String] = []
     var body: some View {
         
         VStack{
-            HStack{
-            Image("DistrictLogo")
-                .resizable()
-                .frame(minWidth: 100, idealWidth: 240, maxWidth: 280, minHeight: 50, idealHeight: 80, maxHeight: 90)
-            // .frame(minWidth: 100, idealWidth: 250, maxWidth: 400)
-            
-                .scaledToFit()
-            Image("AppIconpic")
-                .resizable()
-                .frame(minWidth: 50, idealWidth: 100, maxWidth: 200, minHeight: 50, idealHeight: 100, maxHeight: 200)
-                .scaledToFit()
-            
-        }
+            HeaderView()
             ScrollView(.vertical, showsIndicators: false){
                 Divider()
                 Text("Meet the Developer")
@@ -68,30 +55,31 @@ struct AboutView: View {
                     .font(.largeTitle)
                 Divider()
                 VStack{
-                    ForEach(linkList, id: \.self) { videoID in
-                        YoutubeView(videoID: videoID)
-                            .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height * 0.40)
+                    ForEach(linkList, id: \.self){ link in
+                        YoutubeView(videoID: link)
+                            .scaledToFill()
+//                            .frame(minWidth:  UIScreen.main.bounds.width * 0.30, maxWidth: UIScreen.main.bounds.width * 0.50, minHeight:  UIScreen.main.bounds.height * 0.20, maxHeight: UIScreen.main.bounds.height * 0.50)
+                        
                     }
-                    
-                    
                 }
+                .onAppear(){
+                    pullURLS()
             }
         }
-        .onAppear(){
-            pullURLS(keyVal: keyVal)
+//        
         }
     }
-    func pullURLS(keyVal: String){
+    func pullURLS(){
         let databaseRef = Database.database().reference().child("Links").child("infoVideos")
         databaseRef.getData { myError, myDataSnapshot in
             var newList: [String] = []
             for links in myDataSnapshot?.children.allObjects as! [DataSnapshot] {
                 guard let myLink = links.value as? [String: String] else { return }
-                guard let link = myLink[keyVal] else { return }
+                guard let link = myLink["link"] else { return }
                 print(link)
                 newList.append(link)
             }
-                self.linkList2 = newList
+                self.linkList = newList
         }
         
     }

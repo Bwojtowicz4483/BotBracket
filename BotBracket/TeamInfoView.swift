@@ -18,11 +18,11 @@ struct TeamInfoView: View {
     }
     var body: some View {
         VStack {
-            Divider()
-            Text("# \(team.teamNumber) - \(team.robotName)")
+                    Divider()
+                        Text("# \(team.teamNumber) - \(team.robotName)")
                 .font(.title)
                     HStack{
-                Image(team.teamNumber)
+                        Image(team.teamNumber)
                     .resizable()
                     .frame(maxWidth: 100, maxHeight: 100, alignment: .leading)
                   Spacer()
