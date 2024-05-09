@@ -43,7 +43,6 @@ struct TeamsView: View {
         
         VStack {
             HeaderView()
-             Picker("Sort By", selection: $sortingOption) {
             Picker("Sort By", selection: $sortingOption) {
                 Text("Team #").tag(SortingOption.team)
                 Text("School").tag(SortingOption.school)
@@ -89,7 +88,6 @@ struct TeamsView: View {
             }
         }
        }
-
     }
-}
+
 
